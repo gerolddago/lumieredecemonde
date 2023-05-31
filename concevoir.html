@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LumièresDeCeMonde | CONCEVOIR</title>
+        <link rel="icon" href="img/1x/logo_etoile_1.png"/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <header>
+            <a href="#"><h5>CONCEVOIR</h5></a>
+            <a href="#"><h5>COMMUNAUTE</h5></a>
+            <a href="accueil.html"><img src="img/1x/logo_noir.png" alt="Logo LumièresDeCeMonde"></a>
+            <a href="https://donate.stripe.com/4gwcNmbGe1Rx1kk5kl"><h5>PARTICIPER</h5></a>
+            <a href="#"><h5>FR|EN</h5></a>
+        </header>
+
+        <div class="container">
+            <div class="item" id="item1">
+                <button id="draw">DRAWING</button>
+                <button id="select">SELECT</button>
+                <button id="rectangle">RECTANGLE</button>
+                <button id="circle">CIRCLE</button>
+                <button id="text">TEXT</button>
+                <button id="image">IMAGE</button>
+                <!--<input type="file" id="image_input" accept="image/png, image/jpg, image/jpeg">-->
+                <button id="remove" disabled="disabled">REMOVE</button>
+                <button id="tosvg">GENERATE .SVG</button>
+                <!-- <article id="add_verse"> -->
+                <input type="text" id="inputText" placeholder="Enter a verse (Jean1:1)">
+                <button onclick="getText()">ADD VERSE</button>
+                <!-- </article> -->
+            </div>
+
+            <div class="item" id="item2">
+                <canvas id="canvas" width="600" height="570"></canvas>
+            </div>
+
+            <div class="item" id="item1_2">
+                <button id="draw">DRAWING</button>
+                <button id="select">SELECT</button>
+                <button id="rectangle">RECTANGLE</button>
+                <button id="circle">CIRCLE</button>
+                <button id="text">TEXT</button>
+                <button id="image">IMAGE</button>
+                <!--<input type="file" id="image_input" accept="image/png, image/jpg, image/jpeg">-->
+                <button id="remove" disabled="disabled">REMOVE</button>
+                <button id="tosvg">GENERATE .SVG</button>
+                <!-- <article id="add_verse"> -->
+                <input type="text" id="inputText" placeholder="Enter a verse (Jean1:1)">
+                <button onclick="getText()">ADD VERSE</button>
+                <!-- </article> -->
+            </div>
+
+            <div class="item" id="item3">
+                <b id="b1">T-SHIRT OVERSIZE A COL MONTANT NOIR</b> 
+                <p>Code produit : xxxxxxxxxx</p>
+
+                <b>19,90 €</b>
+
+                <p id="p1">Maillot en jersey de coton, initialement sans col et à manches courtes, dont la forme rappelle celle d'un T. Il avait adopté le cachemire, la soie, la flanelle et le daim (...) parce que les jeans et les T-shirts qu'il aime auraient été déplacés dans les endroits qu'ils fréquentaient (Fr. Dorin, Les Lits à une place, 1980, p. 44).Il avait (...) un jean sale, un tee-shirt au nom d'une université américaine (J. Géry, La Grande escalade, 1981, p. 172).
+                − En appos. avec valeur d'adj. Dont le haut a la forme d'un tee-shirt. Pull tee-shirt. Robe tee-shirt en jersey acidulé (Elle, 31 janv. 1977, p. 44).</p>
+
+                <!-- <button id="size">XS</button>
+                <button id="size">S</button>
+                <button id="size">M</button>
+                <button id="size">L</button>
+                <button id="size">XL</button> -->
+                <br>
+
+                <!-- <label for="size-select"><p><b>SIZE</b></p></label> -->
+                <select name="size" id="size-select">
+                    <option value="">Choose your size</option>
+                    <option value="xs">XS</option>
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                    <option value="xl">XL</option>
+                    <option value="2xl">2XL</option>
+                </select>
+
+                <button id="btn_noir">GET IT VALIDATE</button>
+                <br>
+                <p>Estimated delivery time about 3 days*</p>
+            </div>
+
+            <button id="gen_ideas">GENERATE AI IDEAS</button>
+
+            <div class="item">
+                <img src="img/f_front.jpg" alt="" width="500px" height="auto">
+            </div>
+            <div class="item">
+                <img src="img/f_front_2.jpg" alt="" width="500px" height="auto">
+            </div>
+
+            <br>
+            <div id="svg"></div>
+
+            <div class="item">
+                <div class="infos">
+                    <div class="info" id="info1"><p><b>PRODUCT INFORMATIONS</b></p>
+                        <div id="textDisplay1"><p>Maillot en jersey de coton, initialement sans col et à manches courtes, dont la forme rappelle celle d'un T. Il avait adopté le cachemire, la soie, la flanelle et le daim (...)</p></div>
+                    </div>
+                    <div class="info" id="info2"><p><b>SIZETABLE</b></p>
+                        <img src="img/guide-taille-tshirt.jpg" alt="" width="90%" height="90%">
+                    </div>
+                    <div class="info" id="info3"><p><b>DELIVERY & RETURNS</b></p>
+                        <div id="textDisplay3"><p>Maillot en jersey de coton, initialement sans col et à manches courtes, dont la forme rappelle celle d'un T. Il avait adopté le cachemire, la soie, la flanelle et le daim (...)</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <h5>copyright 2023.</h5> 
+        </footer>
+        
+
+        <!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fabric@5.2.4/dist/fabric.min.js"></script>-->
+        <script src="01_doc.js"></script>
+        <script src="02_doc.js"></script>
+        <!--<script src="main.js"></script>-->
+
+
+        <script src="script.js"></script>
+        <script src="search.js"></script>
+    </body>
+</html>
