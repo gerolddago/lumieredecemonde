@@ -2,8 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Crimson+Text&family=Inter:wght@400;700;900&family=Macondo&display=swap');
 /* *{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;} */
 /* *{font-family: 'Cardo', serif;} */
-*{font-family: 'Inter', sans-serif;
- display:flex; justify-content:center; align-items: center;}
+*{font-family: 'Inter', sans-serif;}
 /*body{display:flex; justify-content:center; align-items: center;}*/
 /* canvas{
     border: 2px solid #000000;
@@ -65,16 +64,14 @@ footer {
 
 
 
-.container, .containerP{
+.containerP{
+ margin-top: 100%;
     justify-content: center;
     display: flex; /*inline-flex*/
     align-items: center;
     align-content: flex-start; /*center*/
     flex-wrap: wrap;
     gap: 10px;  
-}
-.containerP{
-    margin-top: 21%;
 }
 .item {
     margin-top: 0%;
