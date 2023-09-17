@@ -65,7 +65,7 @@ footer {
 
 
 .containerP{
- margin-top: 100%;
+    margin-top: 80%;
     justify-content: center;
     display: flex; /*inline-flex*/
     align-items: center;
