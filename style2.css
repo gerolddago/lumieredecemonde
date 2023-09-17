@@ -10,11 +10,11 @@
 body{
     margin: 0;
     background-color: #fff;
-    height: 75vh;
+    /*height: 75vh;*/
     /*background-image: url("img/sky3.png");*/
-    /*display:flex; justify-content:center; align-items: center;*/
-    display: grid;
-    place-items: center;
+    display:flex; justify-content:center; align-items: center;
+    /*display: grid;
+    place-items: center;*/
 }
 header{
     position: fixed;
