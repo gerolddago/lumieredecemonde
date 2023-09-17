@@ -104,6 +104,7 @@ footer {
 .containerP input{
     border-radius: 0%;
     border: none;
+    outline: none;
     -webkit-appearance: none;
     -ms-appearance: none;
     -moz-appearance: none;
