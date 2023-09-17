@@ -101,7 +101,7 @@ footer {
 #item4 h1,#item4 h3, #item4 p{
     justify-content: center;
 }
-.containerP input{
+.containerP input, input:focus{
     border-radius: 0%;
     border: none;
     outline: none;
