@@ -10,7 +10,7 @@
 body{
     margin: 0;
     background-color: #fff;
-    height: 80vh;
+    height: 55vh;
     /*background-image: url("img/sky3.png");*/
     /*display:flex; justify-content:center; align-items: center;*/
     display: grid;
