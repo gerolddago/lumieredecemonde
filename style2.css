@@ -110,6 +110,9 @@ footer {
     appearance: none;
     border-bottom: 1px solid #000;
 }
+.containerP button{
+    color: #000;
+}
 
 @media screen and (max-width:530px){
     .item img{
