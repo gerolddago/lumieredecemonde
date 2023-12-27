@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Code d'accès | LUMIĒREDECEMONDE FR </title>
+        <link rel="icon" href="img/logo_etoile_2.png"/>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <!-- <img src="img/logo3.jpg" alt="logo" width="60%" height="auto"> -->
+        <div class="containerP">
+            <!-- <div class="item"> -->
+                <input id="password" type="password" placeholder="MOT DE PASSE">
+                <button onclick="verifyPassword()">ENTRER</button>
+            <!-- </div> -->
+        </div>
+        <script>
+            if (document.querySelector("#password") != null) {
+                var password = document.querySelector("#password");
+            }
+            function verifyPassword(){
+                console.log("entrer clické");
+                if (password.value === 'JESUSISTHEWAY'){
+                    document.location.replace("acceuil.html");
+                    console.log("entrer acceuil");
+                }
+            }
+        </script>
+    </body>
+</html>
