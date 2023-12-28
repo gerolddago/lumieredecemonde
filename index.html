@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         <title>LUMIĒREDECEMONDE FR Site Officiel</title>
         <link rel="icon" href="img/logo_etoile_2.png"/>
         <!-- <link rel="stylesheet" href="style2.css"/> -->
@@ -11,15 +11,19 @@
 
     </head>
     <body>
-        <!-- <h2>LUMIĒREDECEMONDE</h2> -->
-        <div class="form">
-            <form method="post">
-                <input type="email" placeholder="EMAIL" id="email" autocomplete="off">
-                <button id="btn">ENVOYER</button>
-            </form>
-        </div>
+        <div class="container-inner">
 
-        <p><a href="code.html"><span style="border-bottom: 1px solid black;"> Code d'accès</span></a></p>
+            <!-- <h2>LUMIĒREDECEMONDE</h2> -->
+            <div class="form">
+                <form method="post">
+                    <input type="email" placeholder="EMAIL" id="email" autocomplete="off">
+                    <button id="btn" style="background-color: black; color:white;">ENVOYER</button>
+                </form>
+            </div>
+
+            <p><a href="code.html"><span style="border-bottom: 1px solid black;"> Code d'accès</span></a></p>
+
+        </div>
 
         <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script>
