@@ -307,14 +307,19 @@ input{
     #last-section{
         margin-bottom: 150%;
     }
+    h1{
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0 5%;
+    }
 }
 
 @media screen and (max-width:376px){
-    h1{
+    /*h1{
         font-size: 35px;
         font-weight: 700;
         margin: 0 5%;
-    }
+    }*/
     ul li a img{
         width: 75px;
     }
@@ -558,8 +563,8 @@ input{
     } */
     .cions{
         position: absolute;
-        top: 75%;
-        right: 9%;
+        top: 25%;
+        right: 6%;
     }
 }
 @media screen and (max-width:376px){
