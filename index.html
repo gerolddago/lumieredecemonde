@@ -1,47 +1,168 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-        <title>LUMIERE DE CE MONDE FR Site Officiel</title>
-        <link rel="icon" href="img/logo_etoile_2.png"/>
-        <!-- <link rel="stylesheet" href="style2.css"/> -->
-        <link rel="stylesheet" href="css/style.css"/>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>LUMIERE DE CE MONDE FR Site Officiel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo_etoile_2.png"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#"><h1>LUMIEREDECEMONDE</h1></a></li>
+        <!-- <li><i class='bx bx-store' style='color:#ffffff'></i></li> -->
+        <!-- <li><i class='bx bx-shopping-bag'  id="cart-icon" data-quantity="0"></i></li> -->
+        <!-- <li><i class='bx bx-user' style='color:#ffffff'></i></li> -->
+      </ul>
+      <div class="cions">
+        <a href="#last-section"><h4>BOUTIQUE</h4></a> 
+        <!-- <i class='bx bx-user' style='color:#ffffff'></i> -->
+        <!-- <i class='bx bx-store' style='color:#ffffff'></i> -->
+        <!-- <li><i class='bx bx-shopping-bag'  id="cart-icon" data-quantity="0"></i></li> -->
+      </div>
+    </nav>
+  </header>
 
-    </head>
-    <body>
-        <div class="container-inner">
-            <p>Entrez votre mail et recevez un code d'accès.</p>
-            <!-- <h2>LUMIĒREDECEMONDE</h2> -->
-            <div class="form">
-                <form method="post">
-                    <input type="email" placeholder="EMAIL" id="email" autocomplete="off">
-                    <button id="btn" style="background-color: black; color:white;">ENVOYER</button>
-                </form>
-            </div>
+  <main>
+    <!--<section>
+      <div class="info">
+        OFFRE DE LANCEMENT -10% sur votre commande avec le code VRAIAMOUR
+      </div>
+    </section>-->
 
-            <p><a href="code.html"><span style="border-bottom: 1px solid black;"> Code d'accès</span></a></p>
+    <section>
+      <a href="#last-section">
+        <picture>
+          <source media="(min-width:500px)" srcset="
+          img/editPost2Vfinal-Copie.jpg 1000w">
+
+          <source srcset="
+          img/editPost2Vfinal.jpg 500w">
+
+          <img src="img/editPost2Vfinal-Copie.jpg" alt="Image 1" draggable="false" id="accueil">
+
+        </picture>
+
+        <!-- <div class="text-over">
+          <h4>Découvrir la nouvelle collection "AMOUR"</h4>
+          <br>
+          <p id="sous_texte">Celle-ci a pour but de redéfinir les valeurs et le poids de ses 5 lettres qui ont changer l'histoire de l'humanité mais qui de nos jours perdent toutes leurs sens.</p>
+        </div>-->
+      </a>
+    </section>
+
+    <section class="shop container" id="last-section">
+        <h3 class="section-title">Gallerie de collection</h3>
+
+        <!-- Shop Content -->
+        <div class="shop-content">
+
+            <!-- Box 2 -->
+            <!-- <a href="produit.html"> -->
+              <div class="product-box">
+                <img
+                src="img/editPost2V7.jpg"
+                alt=""
+                class="product-img"
+                draggable="false">
+                <h4 class="product-title">SWEATSHIRT ROUGE "AMOUR" UNISEXE</h4>
+                <div class="price">49 EUR</div>
+                
+                <a href="https://buy.stripe.com/5kAaFU9rvdzS9c46op">
+                  <button id="checkout-demoiselle">PRECOMMANDER</button> 
+                </a>
+                <!-- <i class='bx bx-shopping-bag add-cart'></i> -->
+              </div>
+            <!-- </a> -->
+
+
+            <!-- Box 4
+            src="https://blogger.googleusercontent.com/img/a/AVvXsEj5JbjFHTpaJ1ACNk9epDZM28Sv96Jp2pDTtUf45CtybF--yuazD9qkxiB1S7oyeMtzrvDDJBlGTdukKgOSrLqUVtMdMjULHy_mt48vYmQov_X0tLrsQgy8NW9wPDF71clWZUVJDWkEj5Klh5JUzHBuUi80NlIzYzhz7mIfD9t64Y7NnwpmDDy8-1LJilw"-->
+            <!-- <a href="produit.html"> -->
+              <div class="product-box">
+                  <img
+                  src="img/editPost2V6.jpg"
+                  alt=""
+                  class="product-img"
+                  draggable="false">
+                  <h4 class="product-title">SWEATSHIRT BLANC "AMOUR" UNISEXE</h4>
+                  <div class="price">49 EUR</div>
+                  
+                  <a href="https://buy.stripe.com/14keWa9rv1Ra73W144">
+                    <button id="checkout-truelove">PRECOMMANDER</button>
+                  </a>
+                  <!-- <i class='bx bx-shopping-bag add-cart'></i> -->
+              </div>
+            <!-- </a> -->
 
         </div>
+        <h4>Nouvelle collection "AMOUR"</h4>
+          <br>
+          <p id="sous_texte">Celle-ci a pour but de redéfinir les valeurs et le poids de ses 5 lettres qui ont changer l'histoire de l'humanité mais qui de nos jours perdent toutes leurs sens.</p>
+    </section>
 
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <script>
-            var btn = document.getElementById('btn');
-            btn.addEventListener('click', function(e){
-                e.preventDefault();
-                var email = document.getElementById('email').value;
 
-                    Email.send({
-                    SecureToken : "eef867af-c2c0-4d30-a151-e1da9bc93590",
-                    To : 'lumieresdecemonde@gmail.com',
-                    From : "contact@lumieresdecemonde.com",
-                    Subject : "Je veux moi aussi être une lumière de ce monde, je rejoins l'aventure !",
-                    Body : "Email: " + email,
-                }).then(
-                message => alert("Merci ! Tu recevras un mail contenant un code d'accès d'ici 1-2 heures maximum.")
-                );
-            })
-        </script>
-    </body>
+    <div class="bas-de-page">
+        <img src="img/logo_etoile_2.png" alt="Logo LUMIĒREDECEMONDE">
+
+        <section id="footer">
+          <div class="bloc-footer">
+            <h3>Mentions Légales</h3>
+            <ul class="liste-services">
+              <li><a href="#"><p>Mentions légales</p></a></li>
+              <li><a href="#"><p>Conditions de vente</p></a></li>
+              <li><a href="#"><p>Politique de confidentialité</p></a></li>
+            </ul>
+          </div>
+
+          <div class="bloc-footer">
+            <h3>FAQ</h3>
+            <ul class="liste-services">
+              <li><a href="#"><p>Compte</p></a></li>
+              <li><a href="#"><p>Informations de livraison</p></a></li>
+              <li><a href="#"><p>Commandes</p></a></li>
+              <li><a href="#"><p>Paiements</p></a></li>
+              <li><a href="#"><p>Retours & échanges</p></a></li>
+              <li><a href="#"><p>Guide des tailles</p></a></li>
+            </ul>
+          </div>
+
+          <div class="bloc-footer">
+            <h3>Entreprise</h3>
+            <ul class="liste-services">
+              <li><a href="#"><p>Histoire</p></a></li>
+              <li><a href="#"><p>Nous contacter</p></a></li>
+            </ul>
+          </div>
+
+          <div class="bloc-footer">
+            <h3>Nous suivre</h3>
+            <ul class="liste-services">
+              <li><a href="#"><p>Instagram</p></a></li>
+              <li><a href="#"><p>Facebook</p></a></li>
+              <li><a href="#"><p>Tiktok</p></a></li>
+            </ul>
+          </div>
+
+      </section>
+      <section id="made-by">
+        <p> Site internet designé et codé par <a href="https://www.gerolddago.com" target="_blank"><span style="border-bottom: 1px solid black;">gerold dago</span></a> , &copy; Tous droits réservés. </p>
+      </section>
+    </div>
+    </main>
+
+    <!-- Link to js -->
+    <!-- <script>
+      section = document.querySelector('.section-title').innerText;
+      title = document.querySelector('title');
+      title.innerText = section;
+    </script> -->
+    <!-- <script src="js/main.js"></script> -->
+    <!-- <script src="js/cart.js"></script> -->
+    <!-- <script src="js/stripe2.js"></script> -->
+</body>
 </html>
