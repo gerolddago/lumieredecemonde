@@ -677,11 +677,10 @@ input{
     background-color: #fff;
     border: 1px solid rgb(230, 230, 230);
 }
-.product-box:hover{
-    /* padding: 10px; */
+/*.product-box:hover{
     border: 1px solid var(--secondary-color);
     transition: .5s;
-}
+}*/
 .product-box p {
     margin: 0 18%;
 }
