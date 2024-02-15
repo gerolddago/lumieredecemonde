@@ -13,17 +13,23 @@
   <header>
     <nav>
       <ul>
-        <li><a href="#"><h1>LUMIEREDECEMONDE</h1></a></li>
-        <!-- <li><i class='bx bx-store' style='color:#ffffff'></i></li> -->
-        <!-- <li><i class='bx bx-shopping-bag'  id="cart-icon" data-quantity="0"></i></li> -->
-        <!-- <li><i class='bx bx-user' style='color:#ffffff'></i></li> -->
+
+        <li>
+          <div class="logo">
+            <a href="#">
+              <img src="img/logo_ldcm_noir.png" alt="logo">
+            </a>
+          </div>
+        </li>
       </ul>
-      <div class="cions">
-        <a href="#last-section"><h4>BOUTIQUE</h4></a> 
-        <!-- <i class='bx bx-user' style='color:#ffffff'></i> -->
-        <!-- <i class='bx bx-store' style='color:#ffffff'></i> -->
-        <!-- <li><i class='bx bx-shopping-bag'  id="cart-icon" data-quantity="0"></i></li> -->
-      </div>
+      <a href="#last-section">
+        <img src="img/menu-sansBG.png" alt="menu" id="menu">
+      </a>
+      <!-- <div class="cions">
+        <a href="#last-section">
+          <img src="img/menu-sansBG.png" alt="menu">
+        </a> 
+      </div> -->
     </nav>
   </header>
 
@@ -46,14 +52,16 @@
           <img src="img/editPost2Vfinal-Copie.jpg" alt="Image 1" draggable="false" id="accueil">
 
         </picture>
-
-        <!-- <div class="text-over">
-          <h4>Découvrir la nouvelle collection "AMOUR"</h4>
-          <br>
-          <p id="sous_texte">Celle-ci a pour but de redéfinir les valeurs et le poids de ses 5 lettres qui ont changer l'histoire de l'humanité mais qui de nos jours perdent toutes leurs sens.</p>
-        </div>-->
       </a>
     </section>
+
+    <div class="nouvelle_collection">
+      <br>
+      <h2>Nouvelle collection "AMOUR"</h2>
+        <br>
+        <p id="sous_texte">Redéfinir les valeurs et le poids de ses 5 lettres qui ont changer l'histoire de l'humanité mais qui de nos jours perdent toutes leurs sens.</p>
+      <br><br>
+    </div>
 
     <section class="shop container" id="last-section">
         <h3 class="section-title">Gallerie de collection</h3>
@@ -73,7 +81,7 @@
                   
                 <h4 class="product-title">SWEATSHIRT ROUGE "AMOUR" UNISEXE</h4>
                 <div class="price"><b>49 EUR</b></div>
-                <p>Bientôt épuisé (M)</p>
+                <p style="color:red;">Bientôt épuisé (M)</p>
                 <a href="https://buy.stripe.com/5kAaFU9rvdzS9c46op">
                   <button id="checkout-demoiselle">COMMANDER</button> 
                 </a>
@@ -115,7 +123,7 @@
                   
                   <h4 class="product-title">SWEATSHIRT BLANC "AMOUR" UNISEXE</h4>
                   <div class="price"> <b> 49 EUR</b> </div>
-                  <p>Bientôt épuisé (M)</p>
+                  <p style="color:red;">Bientôt épuisé (M,L)</p>
                   <a href="https://buy.stripe.com/14keWa9rv1Ra73W144">
                     <button id="checkout-truelove">COMMANDER</button>
                   </a>
@@ -126,11 +134,57 @@
 
         </div>
 
-        <br><br>
-        <h4>Nouvelle collection "AMOUR"</h4>
+        <div class="nouvelle_collection">
           <br>
-          <p id="sous_texte">Celle-ci a pour but de redéfinir les valeurs et le poids de ses 5 lettres qui ont changer l'histoire de l'humanité mais qui de nos jours perdent toutes leurs sens.</p>
-        <br>
+          <h4>Guide de tailles</h4>
+            <br>
+            <p id="sous_texte">
+              Rouge |  La modèle mesure 164.0 cm et porte une taille M. <br>
+              Blanc |  Le modèle mesure 185.0 cm et porte une taille L.
+              <br><br>
+              L'article taille normal.
+            </p>
+          <br><br>
+        </div>
+
+        <div class="nouvelle_collection">
+          <br><br>
+          <h4>Nous contacter</h4>
+            <br>
+            
+            <!-- <div class="container-inner"> -->
+                <div class="form">
+                    <form method="post">
+                        <input type="email" placeholder="EMAIL" id="email" autocomplete="off">
+                        <input type="text" placeholder="VOTRE MESSAGE" id="message" autocomplete="off">
+                        <button id="btn" style="background-color: white; color:black; padding: 7px 20px; margin: 10px; margin-left: 0px;">ENVOYER</button>
+                    </form>
+                </div>
+            <!-- </div> -->
+  
+          <script src="https://smtpjs.com/v3/smtp.js"></script>
+          <script>
+              var btn = document.getElementById('btn');
+              btn.addEventListener('click', function(e){
+                  e.preventDefault();
+                  var email = document.getElementById('email').value;
+                  var message = document.getElementById('message').value;
+  
+                      Email.send({
+                      SecureToken : "eef867af-c2c0-4d30-a151-e1da9bc93590",
+                      To : 'lumieresdecemonde@gmail.com',
+                      From : "contact@lumieresdecemonde.com",
+                      Subject : "Nouveau message de "+ email,
+                      Body : "Email: " + email + " <br>    Message: " + message,
+                  }).then(
+                  message => alert("Merci pour votre message !  Notre équipe s'éfforce de vous répondre dans les plus brefs délais.")
+                  );
+              })
+          </script>
+          
+            <br><br>
+        </div>
+        
     </section>
 
 
