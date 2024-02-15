@@ -41,7 +41,8 @@ h1{
     margin: 0 5%;
 }
 h2{
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 700;
 }
 h3{
     color: rgb(0, 0, 0);
@@ -63,9 +64,10 @@ body{
 
 header {
     /* background-color: var(--primary-color); */
-    padding: 20px;
+    padding: 10px;
     text-align: left;
     color: var(--secondary-color);
+    background-color: #ffffff;
     position: absolute;
     height: auto;
     left: 0;
@@ -74,6 +76,7 @@ header {
     display: flex;
     flex-direction: column;
     z-index: 100;
+    margin-bottom: 0px;
 }
 
 .slider-frame{
@@ -83,46 +86,33 @@ margin-left: 360px;
 margin-top: 20px;
 }
 @-webkit-keyframes slide_animation{
-
 0% {left: 0px;}
-
 10% {left: 0px;}
-
 20% {left:1200px; }
-
 30% {left:1200px;}
-
 40% {left: 2400px;}
-
 50% {left: 2400px;}
-
 60% {left: 1200px;}
-
 70% {left: 1200px;}
-
 80% {left: 0px;}
-
 90% {left: 0px;}
-
 100% {left: 0px;}
 }
 
 .slide-images{ 
 width: 3600px; height: 800px;
 margin: 0 0 0 -2400px; position: relative;
--webkit-animation-name: slide_animation;
--webkit-animation-duration: 33s;
--webkit-animation-iteration-count: infinite;
--webkit-animation-direction: alternate;
--webkit-animation-play-state: running;
+--webkit-animation-name: slide_animation;
+--webkit-animation-duration: 33s;
+--webkit-animation-iteration-count: infinite;
+--webkit-animation-direction: alternate;
+--webkit-animation-play-state: running;
  }
 
 .img-container{ height: 800px; width: 1200px;
 position: relative;
 float: left;
 }
-
-
 
 
 nav ul {
@@ -154,15 +144,29 @@ ul li a img{
     width: 100px;
 }
 
-.cions{
+/* .cions{
     position: absolute;
     top: 30%;
     right: 4%;
-}
+} */
 .cions h4{
     color: var(--primary-color);
 }
-
+.cions img {
+    width: 7%;
+}
+#menu{
+    width: 7%;
+    position: absolute;
+    right: 2%;
+    top: 33%;
+}
+.logo img{
+    width: 45%;
+    position: absolute;
+    top: 30%;
+    left: 2%;
+}
 
 #footer ul li a{
     text-decoration: none;
@@ -176,13 +180,22 @@ a{
     text-decoration: none;
 }
 
-button{
+/* button{
     cursor: pointer;
     padding: 7px 20px;
     background-color: transparent;
     border: 2px solid var(--secondary-color);
     margin: 10px;
     color: var(--secondary-color);
+} */
+button {
+    cursor: pointer;
+    padding: 9px 80px;
+    background-color: #242424;
+    border: 2px solid var(--secondary-color);
+    margin: 10px;
+    margin-bottom: 10%;
+    color: var(--primary-color)
 }
 .text-over{
     position: absolute;
@@ -241,6 +254,13 @@ section img{
 
 #last-section{
     margin-bottom: 30.5%;
+    
+}
+.nouvelle_collection{
+    text-align: left;
+    padding: 5%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e1e1e1;
 }
 
 #footer{
@@ -278,22 +298,21 @@ section img{
 }
 .bloc-footer h3{
     padding-bottom: 20px;
+    font-weight: bold;
 }
 #form button{
     color: #000;
 }
 input{
     border: 1px solid black;
-    border-right: 0px;
+    /* border-right: 0px; */
     border-radius: 0%;
-    padding: 8.5px 10px 8.5px 10px;
     margin-right: -15px;
+    padding: 8.5px 25px 8.5px 10px;
     /* transform: translate(10%,45%); */
     outline: none;
 }
-#email{
-    text-transform: uppercase;
-}
+
 .container-inner{
     position: absolute;
     top: 45%;
@@ -518,6 +537,7 @@ input{
     right: 0;
 
 }
+#btn{margin-left: 0;}
 .btn-buy{
     background-color: var(--secondary-color);
     border-color: var(--secondary-color);
