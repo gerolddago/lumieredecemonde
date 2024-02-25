@@ -81,14 +81,14 @@
                   
                 <h4 class="product-title">SWEATSHIRT ROUGE "AMOUR" UNISEXE</h4>
                 <div class="price"><b>49 EUR</b></div>
-                <!--<p style="color:red;">Bientôt épuisé (M)</p>-->
-                <a href="https://buy.stripe.com/5kAaFU9rvdzS9c46op">
+                <p style="color:red;">ÉPUISÉ</p>
+                <!--<a href="https://buy.stripe.com/5kAaFU9rvdzS9c46op">
                   <button id="checkout-demoiselle">COMMANDER</button> 
-                </a>
+                </a>-->
 
-                  <!--<a href="https://buy.stripe.com/5kAaFU9rvdzS9c46op">
-                    <button id="checkout-truelove" style="background-color : grey; border-color : grey">ÉPUISÉ</button>
-                  </a>-->
+                  <!--<a href="https://buy.stripe.com/5kAaFU9rvdzS9c46op">-->
+                    <button id="checkout-truelove" style="background-color : grey; border-color : grey" href="me">ME PRÉVENIR</button>
+                  <!--</a>-->
                   <br>
                 
               </div>
@@ -125,14 +125,14 @@
                   
                   <h4 class="product-title">SWEATSHIRT BLANC "AMOUR" UNISEXE</h4>
                   <div class="price"> <b> 49 EUR</b> </div>
-                  <!--<p>Bientôt épuisé (M)</p>-->
-                  <a href="https://buy.stripe.com/14keWa9rv1Ra73W144">
-                    <button id="checkout-truelove">COMMANDER</button>
-                  </a>
-
+                  <p>ÉPUISÉ</p>
                   <!--<a href="https://buy.stripe.com/14keWa9rv1Ra73W144">
-                    <button id="checkout-truelove" style="background-color : grey; border-color : grey">ÉPUISÉ</button>
+                    <button id="checkout-truelove">COMMANDER</button>
                   </a>-->
+
+                  <!--<a href="https://buy.stripe.com/14keWa9rv1Ra73W144">-->
+                    <button id="checkout-truelove" style="background-color : grey; border-color : grey" href="me">ME PRÉVENIR</button>
+                  <!--</a>-->
                   <br>
         
               </div>
@@ -153,16 +153,16 @@
           <br><br>
         </div>
 
-        <div class="nouvelle_collection">
+        <div class="nouvelle_collection" id="me">
           <br><br>
-          <h4>Nous contacter</h4>
+          <h4>ME PRÉVENIR</h4>
             <br>
             
             <!-- <div class="container-inner"> -->
                 <div class="form">
                     <form method="post">
-                        <input type="email" placeholder="EMAIL" id="email" autocomplete="off">
-                        <input type="text" placeholder="VOTRE MESSAGE" id="message" autocomplete="off">
+                        <input type="number" placeholder="NUMÉRO (06 XX XX XX XX)" id="message" autocomplete="off" required minlength="10" maxlength="10">
+                        <input type="email" placeholder="EMAIL" id="email" autocomplete="off" required>
                         <button id="btn" style="background-color: white; color:black; padding: 7px 20px; margin: 10px; margin-left: 0px;">ENVOYER</button>
                     </form>
                 </div>
@@ -183,7 +183,7 @@
                       Subject : "Nouveau message de "+ email,
                       Body : "Email: " + email + " <br>    Message: " + message,
                   }).then(
-                  message => alert("Merci pour votre message !  Notre équipe s'éfforce de vous répondre dans les plus brefs délais.")
+                  message => alert("Merci ! Nous vous informerons lorsque de nouveaux stocks seront disponibles.")
                   );
               })
           </script>
