@@ -68,7 +68,7 @@ header {
     text-align: left;
     color: var(--secondary-color);
     background-color: #ffffff;
-    position: absolute;
+    position: relative;
     height: auto;
     left: 0;
     top: 0;
