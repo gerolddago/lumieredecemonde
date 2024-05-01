@@ -257,8 +257,9 @@ section img{
 .nouvelle_collection{
     position: relative;
     text-align: left;
-    padding: 5% 5%;
-    background-color: #ffffff;
+    padding: 2% 5%;
+    background-color: transparent;
+    /* background-color: rgba(255, 255, 255, 1); */
     /* border-top: 1px solid #e1e1e1;
     border-bottom: 1px solid #e1e1e1; */
 }
@@ -632,6 +633,15 @@ input{
     object-fit: fill;
     object-position: center;
 }
+video{
+    width: 100%;
+    object-fit: fill;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
 
 
 
@@ -735,7 +745,8 @@ input{
     .nouvelle_collection{
         position: relative;
         text-align: left;
-        padding: 3% 20%;
+        padding: 3% 10%;
+        background-color: transparent;
     }
     .shop-content2{
         padding: 2% 20%;
