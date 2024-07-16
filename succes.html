@@ -12,8 +12,13 @@
     <div class="container-inner" style="width: 300px;">
         <h1>Paiement Réussi</h1>
         
-        <br> Merci infiniment pour votre commande! <br> Un Email de confirmation vous sera envoyé sous 24h. <br><br> Votre commande sera préparée puis expédiée sous 2 jours ouvrés. La livraison est prévu pour le <span id="livraisonEstimee">XX XXXXXXX</span>. Nous vous en informerons par Email. 
-                  <script>
+        <br> 
+        
+        <span style="text-transform: uppercase;">
+            Merci infiniment pour votre commande! <br> Un Email de confirmation vous sera envoyé sous 24h. <br><br> Votre commande sera préparée puis expédiée sous 2 jours ouvrés. La livraison est prévu pour le <span id="livraisonEstimee">XX XXXXXXX</span>. Nous vous en informerons par Email. 
+        </span>        
+            
+                <script>
                     function livraisonEstimee(){
                       const currentDate = new Date();
                       currentDate.toDateString();
@@ -33,7 +38,7 @@
                       console.log("Date de commande : " + currentDateDD + ' '+ month[currentDateMM]);
                       
 
-                      let livraison = (currentDateDD + 8) + ' '+ month[currentDateMM] ;
+                      let livraison = (currentDateDD + 12) + ' '+ month[currentDateMM] ;
                       // livraison.toString();
 
                       console.log("Date de livraison estimée : " + livraison);
