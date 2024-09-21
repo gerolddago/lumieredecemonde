@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site Officiel — Découvrez la toute nouvelle Collection AMOUR. Si le Coeur est touché, la vision est renouvelée. LUMIEREDECEMONDE.com.">
+    <title>Paiement réussi | LUMIERE DE CE MONDE Site officiel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo_ldcm_lumieredecemonde.jpg"/>
+</head>
+<body>
+    <div class="container-inner" style="width: 300px;">
+        <h1>Paiement Réussi</h1>
+        
+        <br> 
+        
+        <span style="text-transform: uppercase;">
+            Merci infiniment pour votre commande ! <br> Un Email de confirmation vous sera envoyé. <br><br> Votre commande sera préparée puis expédiée sous 4-7 jours ouvrés. La livraison est prévu pour le <span id="livraisonEstimee">XX XXXXXXX</span>. <br> Nous vous en informerons par Email. 
+        </span>        
+            
+                <script>
+                    function livraisonEstimee(){
+                      const currentDate = new Date();
+                      currentDate.toDateString();
+
+                      const currentDateMM = currentDate.getMonth();
+                      const currentDateDD = currentDate.getDate();
+                      const currentDateDay = currentDate.getDay();
+
+                      month = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin","Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+              
+                      // Calcul des jours ouvrés
+                      if (currentDateDay == 'Sat'){
+                        currentDateDD += 2;
+                      }else if (currentDateDay == 'Sun'){
+                        currentDateDD += 1;
+                      }
+                      console.log("Date de commande : " + currentDateDD + ' '+ month[currentDateMM]);
+                      
+
+                      let livraison
+
+                      if (currentDateDD == 17){
+                        livraison = ((currentDateDD - 16) + 14) + ' '+ month[currentDateMM + 1] ;
+                      }
+                      else if (currentDateDD == 18){
+                        livraison = ((currentDateDD - 17) + 14) + ' '+ month[currentDateMM + 1] ;
+                      }
+                      else if (currentDateDD == 19){
+                        livraison = ((currentDateDD - 18) + 14) + ' '+ month[currentDateMM + 1] ;
+                      }
+                      else if (currentDateDD == 20){
+                        livraison = ((currentDateDD - 19) + 14) + ' '+ month[currentDateMM + 1] ;
+                      }
+                      else if (currentDateDD == 21){
+                        livraison = ((currentDateDD - 20) + 14) + ' '+ month[currentDateMM + 1] ;
+                      }
+                      else if (currentDateDD == 22){
+                        livraison = ((currentDateDD - 21) + 14) + ' '+ month[currentDateMM + 1] ;
+                      }
+                      else if (currentDateDD == 23){
+                        livraison = ((currentDateDD - 22) + 14) + ' '+ month[currentDateMM + 1] ;
+                      }
+                      else if (currentDateDD == 24){
+                        livraison = ((currentDateDD - 23) + 14) + ' '+ month[currentDateMM + 1] ;
+                      }
+                      else if (currentDateDD == 25){
+                        livraison = ((currentDateDD - 24) + 14) + ' '+ month[currentDateMM + 1] ;
+                      }
+                      else if (currentDateDD == 26){
+                        livraison = ((currentDateDD - 25) + 14) + ' '+ month[currentDateMM + 1] ;
+                      }
+                      else if (currentDateDD == 27){
+                        livraison = ((currentDateDD - 26) + 14) + ' '+ month[currentDateMM + 1] ;
+                      }
+                      else if (currentDateDD == 28){
+                        livraison = ((currentDateDD - 27) + 14) + ' '+ month[currentDateMM + 1] ;
+                      }
+                      else if (currentDateDD == 29){
+                        livraison = ((currentDateDD - 28) + 14) + ' '+ month[currentDateMM + 1] ;
+                      }
+                      else if (currentDateDD == 30){
+                        livraison = ((currentDateDD - 29) + 14) + ' '+ month[currentDateMM + 1] ;
+                      }
+                      else if (currentDateDD == 31){
+                        livraison = ((currentDateDD - 30) + 14) + ' '+ month[currentDateMM + 1] ;
+                      }
+                      else if (currentDateDD == 28) {
+                        if (currentDateMM == 1){
+                          livraison = ((currentDateDD - 27) + 14) + ' '+ month[currentDateMM + 1] ;
+                        }
+                      }
+                      else {
+                        livraison = (currentDateDD + 14) + ' '+ month[currentDateMM] ;
+                        // livraison.toString();
+                      }
+
+
+
+
+                      if (livraison[0] > 30){
+                        livraison[0] -= 30 ;
+                        livraison[1] += 1 ;
+                      }
+                      
+
+
+
+                      console.log("Date de livraison estimée : " + livraison);
+
+                      divLivraisonEstimee = document.querySelector('#livraisonEstimee');
+                      divLivraisonEstimee.innerText = livraison;
+
+                      return livraison;
+                    }
+                    
+                    livraisonEstimee();
+                    </script>
+
+              <a href="index.html"><button>ACCUEIL</button></a>
+
+        
+      </div>
+</body>
+</html>
