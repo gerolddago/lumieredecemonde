@@ -70,11 +70,11 @@
 
               <div class="espace-commander">
 
-                  <p>SWEATSHIRT ROUGE "AMOUR" UNISEXE <span style="margin-left: 30%;">49 EUR</span> </p>
-                  <p style="color: rgb(255, 56, 56); text-transform: uppercase;font-size: smaller;margin-left: 79%;">épuisé</p>
+                  <p style="font-size: medium;">Le sweatshirt Amour unisexe <span style="margin-left: 30%;">49 EUR</span> </p>
+                  <!-- <p style="color: rgb(255, 56, 56); text-transform: uppercase;font-size: smaller;margin-left: 79%;">épuisé</p> -->
 
                 
-                  <button id="checkout-truelove" style="border-color: rgb(50, 50, 50); background-color: rgb(50, 50, 50); color: rgb(193, 193, 193);">NON DISPONIBLE</button>
+                  <button id="checkout-truelove" style="border-color: rgb(50, 50, 50); background-color: rgb(50, 50, 50)">LISTE D'ATTENTE</button>
 
 
                 <p style="font-size: 9px; margin-bottom: 3%;">Paiement en 3 fois disponible au moment du checkout avec <img src="img/OPTIMIZED/klarna.webp" alt="Logo klarna" style="width: 30px; margin-left: 2px;"></p>
@@ -89,7 +89,7 @@
           
           <div class="show_hide_text_price1">
             <h2>SWEATSHIRT ROUGE "AMOUR" UNISEXE</h2>
-            <p style="color: rgb(255, 56, 56); text-transform: uppercase;font-size: smaller;">épuisé</p>
+            <!-- <p style="color: rgb(255, 56, 56); text-transform: uppercase;font-size: smaller;">épuisé</p> -->
               <br>
               <p id="sous_texte">
               <b>49 EUR </b>
@@ -118,7 +118,7 @@
 
 
             <div class="cta_show_hide">
-              <button id="checkout-truelove" style="border-color: rgb(50, 50, 50); background-color: rgb(50, 50, 50); color: rgb(193, 193, 193);">NON DISPONIBLE</button>
+              <button id="checkout-truelove" style="border-color: rgb(50, 50, 50); background-color: rgb(50, 50, 50)">LISTE D'ATTENTE</button>
 
               <p style="font-size: 9px;margin-bottom: 3%;">Paiement en 3 fois disponible au moment du checkout avec <img src="img/klarna.png" alt="logo klarna" style="width: 30px; margin-left: 2px;"></p>
 
@@ -166,7 +166,7 @@
 
         <br>
         <!-- <h3 class="section-title" style="background-color: rgb(250, 250, 250);"></h3>RECOMMANDATIONS</h3> -->
-        <h3 style="text-align: left; margin-left: 20px;margin-top: 20px;margin-bottom: 20px;">Complétez votre garde-robe</h3>
+        <h3 style="text-align: left; margin-left: 20px;margin-top: 20px;margin-bottom: 20px;font-size: 15px;">Complétez votre garde-robe</h3>
 
         <div class="shop-content2">
           <div class="product-box">
@@ -305,14 +305,14 @@
         movingY = evt.touches[0].clientY ;
       }
       function touchend(){
-        if(startingX+100 < movingX){
+        if(startingX+15 < movingX){
           // console.log('right');
           if (photo > 1){
             photo -= 1;
             console.log('photo : ' + photo);
           }
           
-        } else if(startingX-100 > movingX){
+        } else if(startingX-15 > movingX){
           // console.log('left');
           if (photo < 3){
             photo += 1;
@@ -331,20 +331,43 @@
         
 
 
-
         if (photo == 1){
           bottomLineSlider.style.left = '0%';
-          bottomLineSlider.style.transition = "1s"
+          bottomLineSlider.style.transition = "0.5s"
         }
         if (photo == 2){
           bottomLineSlider.style.left = '33%';
-          bottomLineSlider.style.transition = "1s"
+          bottomLineSlider.style.transition = "0.5s"
         }
         if (photo == 3){
           bottomLineSlider.style.left = '66%';
-          bottomLineSlider.style.transition = "1s"
+          bottomLineSlider.style.transition = "0.5s"
         }
       }
+
+
+      // if(bottomLineSlider.style.position == 'fixed'){
+      //     bottomLineSlider.style.bottom = '10%';
+      //   }
+      window.addEventListener('scroll',()=>{
+            const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = window.scrollY;
+
+            // console.log(scrollable);
+            // console.log(Math.round(scrolled));
+
+
+            if (scrolled > 25) {
+              bottomLineSlider.style.position = 'relative';
+              // console.log('bottomLineSlider : relative');
+            }
+            else if (scrolled < 25) {
+              bottomLineSlider.style.position = 'fixed';
+              // console.log('bottomLineSlider : fixed');
+            }
+
+        })
+        
     </script>
 </body>
 </html>
