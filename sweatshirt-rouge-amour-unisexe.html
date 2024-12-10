@@ -346,27 +346,22 @@
       }
 
 
-      // if(bottomLineSlider.style.position == 'fixed'){
-      //     bottomLineSlider.style.bottom = '10%';
-      //   }
-      window.addEventListener('scroll',()=>{
-            const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-            const scrolled = window.scrollY;
+      // window.addEventListener('scroll',()=>{
+      //       const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      //       const scrolled = window.scrollY;
 
             // console.log(scrollable);
             // console.log(Math.round(scrolled));
 
 
-            if (scrolled > 25) {
-              bottomLineSlider.style.position = 'relative';
-              // console.log('bottomLineSlider : relative');
-            }
-            else if (scrolled < 25) {
-              bottomLineSlider.style.position = 'fixed';
-              // console.log('bottomLineSlider : fixed');
-            }
+        //     if (scrolled > 25) {
+        //       bottomLineSlider.style.position = 'relative';
+        //     }
+        //     else if (scrolled < 25) {
+        //       bottomLineSlider.style.position = 'fixed';
+        //     }
 
-        })
+        // })
         
     </script>
 </body>
