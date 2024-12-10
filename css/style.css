@@ -1237,13 +1237,13 @@ video{
     transform: translateX(-120%);
 }
 .bottomLineSlider{
-    position: fixed;
+    position: relative;
     width: 34%;
     height: 2px;
     background-color: #000;
     transform: translateY(-4px);
     z-index: 100;
-    bottom: 18.4%;
+    /* bottom: 18.4%; */
 }
 
 /*--------------------------------------------------------*/
