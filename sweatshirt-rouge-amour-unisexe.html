@@ -74,7 +74,7 @@
                   <!-- <p style="color: rgb(255, 56, 56); text-transform: uppercase;font-size: smaller;margin-left: 79%;">épuisé</p> -->
 
                 
-                  <button id="checkout-truelove" style="border-color: rgb(50, 50, 50); background-color: rgb(50, 50, 50)">LISTE D'ATTENTE</button>
+                  <button id="checkout-truelove" style="border-color: rgb(50, 50, 50); background-color: rgb(50, 50, 50)" onclick="listedattenteOn()">LISTE D'ATTENTE</button>
 
 
                 <p style="font-size: 9px; margin-bottom: 3%;">Paiement en 3 fois disponible au moment du checkout avec <img src="img/OPTIMIZED/klarna.webp" alt="Logo klarna" style="width: 30px; margin-left: 2px;"></p>
@@ -195,6 +195,90 @@
             </a>
               <br>
           </div>
+        </div>
+
+
+
+        <!-- <div class="nouvelle_collection" id="me">
+          <br><br>
+          <h4>NOUS CONTACTER</h4>
+            <br>
+            
+                <div class="form">
+                    <form method="post">
+                        <input type="text" placeholder="EMAIL" id="email" autocomplete="off" required>
+                        <input type="text" placeholder="MESSAGE" id="message" autocomplete="off" required>
+                        <p style="font-size: 10px; margin-top: 7px;margin-bottom: 10px;">
+                          VOS INFORMATIONS PERSONNELLES NE SERONT NI DIVULGUÉ, NI UTILISÉ POUR DU SPAM.
+                        </p>
+    
+                        <button id="btn">ENVOYER</button>
+                    </form>
+                </div>
+    
+          <script src="https://smtpjs.com/v3/smtp.js"></script>
+          <script>
+              var btn = document.getElementById('btn');
+              btn.addEventListener('click', function(e){
+                  e.preventDefault();
+                  var email = document.getElementById('email').value;
+                  var message = document.getElementById('message').value;
+    
+                      Email.send({
+                      SecureToken : "eef867af-c2c0-4d30-a151-e1da9bc93590",
+                      To : 'lumieresdecemonde@gmail.com',
+                      From : "contact@lumieresdecemonde.com",
+                      Subject : "Nouveau message de "+ email,
+                      Body : "Email: " + email + " <br>    Message: " + message,
+                  }).then(
+                  message => alert("Merci pour votre message ! Nous faisons tout notre possible pour vous répondre dans les plus brèves délais.")
+                  );
+              })
+          </script>
+          
+            <br><br>
+        </div> -->
+
+        <div class="ombre" onclick="listedattenteOff()"></div>
+        <div class="nouvelle_collection" id="liste_dattente">
+          
+          <br><br>
+          <h3 style="font-size: 15px">Rejoindre la liste d'attente</h3>
+            <br>
+            
+                <div class="form">
+                    <form method="post">
+                        <input type="text" placeholder="Adresse email" id="email" autocomplete="off" required>
+                        <p style="font-size: 10px; margin-top: 7px;margin-bottom: 10px;">
+                          En rejoignant la liste d'attente j'accepte d'être contacter par LUMIERE DE CE MONDE.
+                          Vos informations personnelles ne seront ni divulgué, ni utilisé pour du spam.
+                        </p>
+    
+                        <button id="btn" onclick="listedattenteOff()">S'ENREGISTER</button>
+                    </form>
+                </div>
+    
+          <script src="https://smtpjs.com/v3/smtp.js"></script>
+          <script>
+              var btn = document.getElementById('btn');
+              btn.addEventListener('click', function(e){
+                  e.preventDefault();
+                  var email = document.getElementById('email').value;
+                  var message = document.getElementById('message').value;
+    
+                      Email.send({
+                      SecureToken : "eef867af-c2c0-4d30-a151-e1da9bc93590",
+                      To : 'lumieresdecemonde@gmail.com',
+                      From : "contact@lumieresdecemonde.com",
+                      Subject : "Nouveau message de "+ email,
+                      Body : "Je souhaite faire parti de la liste d'attente. Voici mon adresse email: " + email ,
+                  }).then(
+                  message => alert("Merci ! Votre inscription à la liste d'attente à bien été prise en compte.")
+                  );
+              })
+          </script>
+          
+            <br><br>
         </div>
 
         
@@ -363,6 +447,32 @@
 
         // })
         
+
+
+
+        const ombre = document.querySelector('.ombre');
+        const listeDattente = document.querySelector('#liste_dattente');
+
+        function listedattenteOn(){
+          ombre.style.display = "block";
+          listeDattente.style.display = "block";
+          ombre.style.transition = "1s"
+          listeDattente.style.transition = "1s"
+        }
+
+        function listedattenteOff(){
+          ombre.style.display = "none";
+          listeDattente.style.display = "none";
+          ombre.style.transition = "1s"
+          listeDattente.style.transition = "1s"
+        }
+
     </script>
+
+
+
+
+
+    
 </body>
 </html>
