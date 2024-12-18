@@ -354,7 +354,8 @@ section img{
     color: #000;
 }
 input{
-    border: 1px solid black;
+    border: none;
+    border-bottom: 1px solid black;
     /* border-right: 0px; */
     border-radius: 0%;
     /* margin-right: -15px; */
@@ -1244,6 +1245,28 @@ video{
     transform: translateY(-4px);
     z-index: 100;
     /* bottom: 18.4%; */
+}
+
+#liste_dattente{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+}
+.ombre{
+    display: none;
+    background-color: rgba(255, 255, 255, .8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
 }
 
 /*--------------------------------------------------------*/
