@@ -88,7 +88,7 @@
 
           
           <div class="show_hide_text_price1">
-            <h2>SWEATSHIRT ROUGE "AMOUR" UNISEXE</h2>
+            <h2>Le sweatshirt Amour unisexe</h2>
             <!-- <p style="color: rgb(255, 56, 56); text-transform: uppercase;font-size: smaller;">épuisé</p> -->
               <br>
               <p id="sous_texte">
@@ -151,7 +151,7 @@
           <h4 style="text-transform: uppercase;">Détails & Entretien</h4>
           <br>
           <p style=" color: rgb(150, 150, 150)">
-            Ce sweatshirt rouge est doté de manches longues et d'une encolure ronde. <br>
+            Ce sweatshirt est doté de manches longues et d'une encolure ronde. <br>
             Ce modèle polyvalent est à la fois symbole de confort et de qualité suppérieure.
             Il est fabriqué à partir de coton et de polyester. 
             <br><br><br>
@@ -239,7 +239,7 @@
             <br><br>
         </div> -->
 
-        <div class="ombre" onclick="listedattenteOff()"></div>
+        <div class="ombre" onclick="listedattenteOff2()"></div>
         <div class="nouvelle_collection" id="liste_dattente">
           
           <br><br>
@@ -247,24 +247,41 @@
             <br>
             
                 <div class="form">
-                    <form method="post">
-                        <input type="text" placeholder="Adresse email" id="email" autocomplete="off" required>
-                        <p style="font-size: 10px; margin-top: 7px;margin-bottom: 10px;">
+                    <form method="post" action="" name="listedattente-form">
+                        <input type="email" placeholder="Adresse email" id="email" name="client-email" autocomplete="off" required>
+                        <p style="font-size: 10px; margin-top: 7px;margin-bottom: 10px;" id="enrejoignant">
                           En rejoignant la liste d'attente j'accepte d'être contacter par LUMIERE DE CE MONDE.
                           Vos informations personnelles ne seront ni divulgué, ni utilisé pour du spam.
                         </p>
+
+                        <p id="merci"> <br><br>Merci ! <br> 
+                           Nous vous préviendrons par email lorsque la pièce sera de nouveau disponible.
+                        </p>
     
-                        <button id="btn" onclick="listedattenteOff()">S'ENREGISTER</button>
+                        <!-- <button id="btn" onclick="listedattenteOff()">S'ENREGISTER</button> -->
+                        <input type="submit" value="S'ENREGISTER" id="submit" onclick="listedattenteOff()">
                     </form>
                 </div>
+
+          <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbx_9khXBREFDdkiTlTST-w3-HkKtjKIaHduBFFjaCIqFWAl6M78Y_vRuI2wZU-or4gd_g/exec';
+            const form = document.forms['listedattente-form'];
+
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, {method: 'POST', body: new FormData(form)})
+              // .then(response => alert("Merci ! Nous vous préviendrons par email lorsque la pièce sera de nouveau disponible."))
+              // .then(() => {window.location.reload(); })
+              .catch(error => console.error('Error!', error.message))
+            })
+          </script>
     
-          <script src="https://smtpjs.com/v3/smtp.js"></script>
+          <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
           <script>
               var btn = document.getElementById('btn');
               btn.addEventListener('click', function(e){
                   e.preventDefault();
                   var email = document.getElementById('email').value;
-                  // var message = document.getElementById('message').value;
     
                       Email.send({
                       SecureToken : "eef867af-c2c0-4d30-a151-e1da9bc93590",
@@ -273,10 +290,10 @@
                       Subject : "Nouveau message de "+ email,
                       Body : "Je souhaite faire parti de la liste d'attente. Voici mon adresse email: " + email ,
                   }).then(
-                  message => alert("Merci ! Votre inscription à la liste d'attente à bien été prise en compte.")
+                  message => alert("Merci ! <br> Nous préviendrons par email lorsque la pièce sera de nouveau disponible.")
                   );
               })
-          </script>
+          </script> -->
           
             <br><br>
         </div>
@@ -370,7 +387,7 @@
       const bottomLineSlider = document.querySelector('.bottomLineSlider');
       const productImg = document.querySelectorAll('.product-img');
       let photo = 1;
-      console.log('photo : ' + photo);
+      // console.log('photo : ' + photo);
 
       // productImg[0].addEventListener('click', () => {
       //   bottomLineSlider.style.position = 'relative';
@@ -393,14 +410,14 @@
           // console.log('right');
           if (photo > 1){
             photo -= 1;
-            console.log('photo : ' + photo);
+            // console.log('photo : ' + photo);
           }
           
         } else if(startingX-15 > movingX){
           // console.log('left');
           if (photo < 3){
             photo += 1;
-          console.log('photo : ' + photo);
+          // console.log('photo : ' + photo);
           }
           
         }
@@ -417,15 +434,15 @@
 
         if (photo == 1){
           bottomLineSlider.style.left = '0%';
-          bottomLineSlider.style.transition = "0.5s"
+          // bottomLineSlider.style.transition = "0.5s"
         }
         if (photo == 2){
           bottomLineSlider.style.left = '33%';
-          bottomLineSlider.style.transition = "0.5s"
+          // bottomLineSlider.style.transition = "0.5s"
         }
         if (photo == 3){
           bottomLineSlider.style.left = '66%';
-          bottomLineSlider.style.transition = "0.5s"
+          // bottomLineSlider.style.transition = "0.5s"
         }
       }
 
@@ -452,20 +469,62 @@
 
         const ombre = document.querySelector('.ombre');
         const listeDattente = document.querySelector('#liste_dattente');
+        const merci = document.querySelector('#merci');
+        const eMail = document.querySelector('#email');
+        const eMailValue = document.querySelector('#email').value;
+        const enRejoignant = document.querySelector('#enrejoignant');
+        const submit = document.querySelector('#submit');
 
         function listedattenteOn(){
           ombre.style.display = "block";
-          listeDattente.style.display = "block";
-          ombre.style.transition = "1s"
-          listeDattente.style.transition = "1s"
+          listeDattente.style.display = "block"; 
+
+          console.log("bouton invisible");
+          submit.style.visibility = "hidden";
         }
+        
+
+        eMail.addEventListener("keyup", () => {
+            // let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            let pattern2 = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (eMail.value.match(pattern2)){
+              submit.style.visibility = "visible";
+              console.log("adresse compatible, bouton visible");
+              return
+            }
+            submit.style.visibility = "hidden";
+            console.log("adresse non compatible, bouton invisible");
+
+            })
+
+
+          // if (!eMail.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+          //   submit.style.visibility = "hidden";
+          //   return false;
+          //   console.log("adresse non compatible, bouton invisible");
+          // }
+          // submit.style.visibility = "visible";
+          // return true;
+          // console.log("adresse compatible, bouton visible");
+        
 
         function listedattenteOff(){
+          // ombre.style.display = "none";
+          // listeDattente.style.display = "none";
+          merci.style.display = "block";
+          eMail.style.display = "none";
+          enRejoignant.style.display = "none";
+          submit.style.display = "none";
+        }
+
+        function listedattenteOff2(){
           ombre.style.display = "none";
           listeDattente.style.display = "none";
-          ombre.style.transition = "1s"
-          listeDattente.style.transition = "1s"
+          window.location.reload();
         }
+
+         
 
     </script>
 

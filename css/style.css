@@ -224,7 +224,7 @@ a{
     margin: 10px;
     color: var(--secondary-color);
 } */
-button {
+button, #submit{
     cursor: pointer;
     /* padding: 9px 80px; */
     width: 50%;
@@ -234,6 +234,9 @@ button {
     margin: 10px;
     margin-bottom: 3%;
     color: var(--primary-color)
+}
+#submit{
+    margin-left: 0;
 }
 .text-over{
     position: absolute;
@@ -1256,7 +1259,9 @@ video{
     transform: translate(-50%,-50%);
     width: 100%;
     max-width: 400px;
+    height: 250px;
     background-color: #ffffff;
+    border: 0.5px solid rgb(235, 235, 235);
 }
 .ombre{
     display: none;
@@ -1269,4 +1274,7 @@ video{
     left: 0;
 }
 
+#merci{
+    display: none;
+}
 /*--------------------------------------------------------*/
