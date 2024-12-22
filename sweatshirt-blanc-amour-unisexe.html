@@ -30,7 +30,7 @@
         <div class="shop-content">
 
             
-          <div class="block-espace">
+          <div class="block-espace" onclick="photoZoom()">
 
               <div class="wrapper">
                   <div class="slider">
@@ -70,7 +70,7 @@
 
               <div class="espace-commander">
 
-                  <p style="font-size: medium;">Le sweatshirt Amour unisexe <span style="margin-left: 30%;">49 EUR</span> </p>
+                  <p style="font-size: medium;">Le sweatshirt Amour unisexe <span style="margin-left: 30%; font-size: 11px;">49 EUR</span> </p>
                   <!-- <p style="color: rgb(255, 56, 56); text-transform: uppercase;font-size: smaller;margin-left: 79%;">épuisé</p> -->
 
                 
@@ -92,7 +92,7 @@
             <!-- <p style="color: rgb(255, 56, 56); text-transform: uppercase;font-size: smaller;">épuisé</p> -->
               <br>
               <p id="sous_texte">
-              <b>49 EUR </b>
+              49 EUR
               </p>
 
           </div>
@@ -250,7 +250,7 @@
                     <form method="post" action="" name="listedattente-form">
                         <input type="email" placeholder="Adresse email" id="email" name="client-email" autocomplete="off" required>
                         <p style="font-size: 10px; margin-top: 7px;margin-bottom: 10px;" id="enrejoignant">
-                          En rejoignant la liste d'attente j'accepte d'être contacter par LUMIERE DE CE MONDE.
+                          En rejoignant la liste d'attente j'accepte d'être contacter par LUMIERE DE CE MONDE. <br>
                           Vos informations personnelles ne seront ni divulgué, ni utilisé pour du spam.
                         </p>
 
@@ -522,6 +522,37 @@
           ombre.style.display = "none";
           listeDattente.style.display = "none";
           window.location.reload();
+        }
+
+
+
+        const photoSlider = document.querySelector('.slider');
+        zoomIn = false;
+
+        function photoZoom () {
+          
+          
+          if (zoomIn == false) {
+            console.log("ZoomIn Photo activé");
+            photoSlider.style.zIndex = "1000";
+            photoSlider.style.position = "fixed";
+            photoSlider.style.top = "0px";
+            photoSlider.style.left = "0px";
+            photoSlider.style.left = "-37%";
+            photoSlider.style.height = "100vh";
+            zoomIn = true;
+            console.log("ZoomIn Photo terminé");
+          }
+          photoSlider.addEventListener("click", () => {
+            if (zoomIn == true) {
+              console.log("ZoomOut Photo activé");
+              window.location.reload();
+              zoomIn = false;
+              console.log("ZoomOut Photo terminé");
+          }
+            })
+         
+          
         }
 
          
