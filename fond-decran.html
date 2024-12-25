@@ -24,10 +24,11 @@
   </header>
 
   <main>
-    <section class="shop container" id="last-section">
+    
+    <p style="margin-top: 2%;">LES FONDS D'ECRANS</p> 
+    <p style="color: grey;">maintenir ou clique droit pour enregistrer l'image</p><br>
 
-      <p style="margin-top: 2%;">LES FONDS D'ECRANS</p> 
-      <p style="color: grey;">maintenir ou clique droit pour enregistrer l'image</p><br>
+    <section class="shop container" id="last-section" >
 
       <!-- <p style="margin-left: 2%; margin-top: 4%;text-align: left;font-size: 12px;font-weight: 400;">"AMOUR"</p> -->
    
@@ -140,27 +141,28 @@
     </div>
     </main>
 
-    <!-- <script>
+    <script>
       console.log("début");
       let boutique = document.querySelector("#boutique");
       let galerie = document.querySelector(".shop-content4");
       let smallIcons = true;
-      console.log("grille grande");
+      galerie.style.gridTemplateColumns = "repeat(auto-fit,minmax(150px,auto))";
+      console.log("grille fond decran petite");
 
-      boutique.addEventListener("click", () => {
-        if (smallIcons == false) {
-          galerie.style.gridTemplateColumns = "repeat(auto-fit,minmax(150px,auto))";
-          smallIcons = true;
-          console.log("grille petite");
-        }
-        else if (smallIcons == true) {
-          galerie.style.gridTemplateColumns = "repeat(auto-fit,minmax(300px,auto))";
-          smallIcons = false;
-          console.log("grille grande");
-        }
+      // boutique.addEventListener("click", () => {
+      //   if (smallIcons == false) {
+      //     galerie.style.gridTemplateColumns = "repeat(auto-fit,minmax(150px,auto))";
+      //     smallIcons = true;
+      //     console.log("grille petite");
+      //   }
+      //   else if (smallIcons == true) {
+      //     galerie.style.gridTemplateColumns = "repeat(auto-fit,minmax(300px,auto))";
+      //     smallIcons = false;
+      //     console.log("grille grande");
+      //   }
         
-      })
-    </script> -->
+      // })
+    </script>
 
 </body>
 </html>
