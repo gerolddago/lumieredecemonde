@@ -50,10 +50,10 @@
                   
                   <p id="price-catalogue" style="margin-left: 0;margin-right: 0;">49 EUR</p>
 
-                  <div class="colorboxes">
+                  <!-- <div class="colorboxes">
                     <div class="colorboxred"></div>
                     <div class="colorboxwhite"></div>
-                  </div>
+                  </div> -->
                 </div>
             
 
@@ -75,11 +75,12 @@
                     
                     <p id="price-catalogue" style="margin-left: 0;margin-right: 0;">49 EUR</p>
 
-                    <div class="colorboxes">
+                    <!-- <div class="colorboxes">
                       <div class="colorboxwhite"></div>
                       <div class="colorboxred"></div>
-                    </div>
+                    </div> -->
                 </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
         </div>
 
@@ -171,19 +172,19 @@
       console.log("début");
       let boutique = document.querySelector("#boutique");
       let galerie = document.querySelector(".shop-content3");
-      let smallIcons = false;
-      console.log("grille grande");
+      let smallIcons = true;
+      // console.log("grille petite");
 
       boutique.addEventListener("click", () => {
         if (smallIcons == false) {
           galerie.style.gridTemplateColumns = "repeat(auto-fit,minmax(150px,auto))";
           smallIcons = true;
-          console.log("grille petite");
+          // console.log("grille petite");
         }
         else if (smallIcons == true) {
           galerie.style.gridTemplateColumns = "repeat(auto-fit,minmax(300px,auto))";
           smallIcons = false;
-          console.log("grille grande");
+          // console.log("grille grande");
         }
         
       })
