@@ -818,7 +818,7 @@ video{
   .slider {
     /* min-width: calc(50% - .5rem); */
     min-width: 100%;
-    aspect-ratio: 1 / 1;
+    /* aspect-ratio: 1 / 1; */
     /* background: #222; */
     display: flex;
     justify-content: center;
